@@ -29,7 +29,11 @@ public class Element {
         gatName = driver.findElement(By.xpath("//*[contains(text(), '"+name+"')]")).getText();
         return gatName;
     }
-
+    public static String CreateXpathNameForElement(String name) {
+        System.out.println("-----Start method " + Thread.currentThread().getStackTrace()[1].getMethodName());
+        String returnName = "//*[contains(text(), '" + name + "')]";
+        return returnName;
+    }
 
     public static void waitElementToBeClickableAndClick(String link, WebDriver driver) throws InterruptedException {
         System.out.println("-----Start method " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + link);

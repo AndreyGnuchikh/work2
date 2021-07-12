@@ -21,6 +21,7 @@ public class Test7_ReportOnTheCurrentStatusOfSettlements_RequiredTags extends Of
             try {
                 GetDateFD.getData("20.07.2020 17:22:00", "20.07.2020 17:22:59", "Отчёт о текущем состоянии расчетов","20.07.2020 17:22", driver);
             } catch (Throwable throwable) {
+                Thread.sleep(2000);
                 GetDateFD.getData("20.07.2020 17:22:00", "20.07.2020 17:22:59", "Отчёт о текущем состоянии расчетов","20.07.2020 17:22", driver);
             }
             Thread.sleep(500);

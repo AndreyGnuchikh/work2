@@ -21,6 +21,7 @@ public class Test6_CloseFiscalReport_AllTags extends OfdStand {
             try {
                 GetDateFD.getData("20.07.2020 17:22:00", "20.07.2020 17:22:59", "Отчёт о закрытии фискального накопителя","20.07.2020 17:22", driver);
             } catch (Throwable throwable) {
+                Thread.sleep(2000);
                 GetDateFD.getData("20.07.2020 17:22:00", "20.07.2020 17:22:59", "Отчёт о закрытии фискального накопителя","20.07.2020 17:22", driver);
             }
             Thread.sleep(500);

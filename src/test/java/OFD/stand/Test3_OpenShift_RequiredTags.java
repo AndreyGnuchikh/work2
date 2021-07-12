@@ -22,6 +22,7 @@ public class Test3_OpenShift_RequiredTags extends OfdStand {
             try {
                 GetDateFD.getData("25.01.2021 10:33:00", "25.01.2021 10:33:59", "Отчёт об открытии смены","25.01.2021 10:33", driver);
             } catch (Throwable throwable) {
+                Thread.sleep(2000);
                 GetDateFD.getData("25.01.2021 10:33:00", "25.01.2021 10:33:59", "Отчёт об открытии смены","25.01.2021 10:33", driver);
             }
             Thread.sleep(500);

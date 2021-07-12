@@ -21,6 +21,7 @@ public class Test5_ChangeRegister_RequiredTags extends OfdStand {
              try {
                  GetDateFD.getData("07.12.2020 17:02:00", "07.12.2020 17:02:59", "Отчёт об изменении параметров регистрации","07.12.2020 17:02", driver);
              } catch (Throwable throwable) {
+                 Thread.sleep(2000);
                  GetDateFD.getData("07.12.2020 17:02:00", "07.12.2020 17:02:59", "Отчёт об изменении параметров регистрации","07.12.2020 17:02", driver);
              }
             Thread.sleep(500);

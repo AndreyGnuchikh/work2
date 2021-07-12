@@ -18,10 +18,11 @@ public class Test2_RegisterDocument_RequiredTags extends OfdStand {
             driver = Drivers.ff();
             Login login = new Login(url, log1, pass1);
             login.start(driver);
-            Thread.sleep(200);
+
             try {
                 GetDateFD.getData("27.01.2021 10:00:00", "27.01.2021 23:59:59", "Отчёт о регистрации", "27.01.2021 12:36", driver);
             } catch (Throwable throwable) {
+                Thread.sleep(3000);
                 GetDateFD.getData("27.01.2021 10:00:00", "27.01.2021 23:59:59", "Отчёт о регистрации", "27.01.2021 12:36", driver);
             }
             Thread.sleep(500);

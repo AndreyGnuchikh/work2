@@ -29,6 +29,7 @@ public class Test8_Receipt extends OfdStand {
                 GetDateFD.getData("19.02.2021 15:29:00", "19.02.2021 15:30:00", "Кассовый чек", "19.02.2021 15:30", driver);
                 Thread.sleep(500);
             } catch (Throwable throwable) {
+                Thread.sleep(2000);
                 GetDateFD.getData("19.02.2021 15:29:00", "19.02.2021 15:30:00", "Кассовый чек", "19.02.2021 15:30", driver);
                 Thread.sleep(500);
             }
