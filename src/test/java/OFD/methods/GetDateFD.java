@@ -22,7 +22,7 @@ public class GetDateFD {
         muchoCheese.get(1).sendKeys(time2);
         Thread.sleep(300);
         driver.findElement(By.className("v-filterselect-input-readonly")).click();
-        Element.clickElementByName(typeFD, driver);
+        Element.clickElementByNameFD("v-filterselect-suggestmenu",typeFD, driver);
         driver.findElement(By.className("v-button-blue")).click();
         Thread.sleep(300);
         Element.doubleClickElementByName(clickFDData, driver);

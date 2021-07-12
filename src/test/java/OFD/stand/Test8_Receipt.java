@@ -518,7 +518,7 @@ public class Test8_Receipt extends OfdStand {
     public void Test50_Receipt_Item_MarkBox() {
         try {
 
-            Check.checkExit(getElement(1,1,driver),"Код маркировки 444D 04607027768263 2\n" +
+            Check.checkExit(getElement(1,0,driver),"Код маркировки 444D 04607027768263 2\n" +
                     "Код товара RE0EMKhA68cy\n" +
                     "GTIN 04607027768263\n" +
                     "S/N 2", driver);
@@ -539,6 +539,7 @@ public class Test8_Receipt extends OfdStand {
     public static String  getElement(int NumRow,int NumElementArray,WebDriver driver){
         ArrayList<WebElement> GetFirstBlockElements =  (ArrayList<WebElement>) driver.findElements(By.className("noNeedRowBackground"));
         ArrayList<WebElement> getItemsElement = (ArrayList<WebElement>) GetFirstBlockElements.get(NumRow).findElements(By.tagName("td"));
+        System.out.println(getItemsElement.size());
         return getItemsElement.get(NumElementArray).getText();
     }
 }

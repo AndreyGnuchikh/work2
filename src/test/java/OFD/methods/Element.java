@@ -15,6 +15,11 @@ public class Element {
         System.out.println("-----Start method " + Thread.currentThread().getStackTrace()[1].getMethodName());
         driver.findElement(By.xpath("//*[contains(text(), '"+name+"')]")).click();
     }
+    public static void clickElementByNameFD(String className,String textName, WebDriver driver) {
+        System.out.println("-----Start method " + Thread.currentThread().getStackTrace()[1].getMethodName());
+        //*[@class= 'v-filterselect-suggestmenu']/*//[contains(text(), 'Отчёт об открытии смены')] (1 блок найти элемент. И внутри этого текст:Отчёт об открытии смены)
+        driver.findElement(By.xpath("//*[@class= '"+className+"']/*//*[contains(text(), '"+textName+"')]")).click();
+    }
     public static void doubleClickElementByName(String name, WebDriver driver) {
         System.out.println("-----Start method " + Thread.currentThread().getStackTrace()[1].getMethodName());
         Actions actions = new Actions(driver);
@@ -97,9 +102,9 @@ public class Element {
     }
     public static void GetIdAndIfElementExistClick(String elementClass, WebDriver driver) throws InterruptedException {
         System.out.println("-----Start method " + Thread.currentThread().getStackTrace()[1].getMethodName());
-        String idElement =  driver.findElement(By.xpath("//div[@class='"+elementClass+"']")).getAttribute("id");
-        Boolean exist = driver.findElements(By.id(idElement)).size()>0;
+        Boolean exist =  driver.findElements(By.xpath("//div[@class='"+elementClass+"']")).size()>0;
         if(exist){
+            String idElement =  driver.findElement(By.xpath("//div[@class='"+elementClass+"']")).getAttribute("id");
             driver.findElement(By.id(idElement)).click();
         }
         Thread.sleep(100);
